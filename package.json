@@ -1,12 +1,12 @@
 {
   "name": "currx",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
     "build:doc": "typedoc --out doc/ src/",
-    "test": "jest --config jest.json --coverage",
+    "test": "jest --coverage",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once",
     "prepare": "npm run build",
@@ -17,9 +17,25 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "jest": {
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "collectCoverageFrom": ["src/**/*.ts", "!src/index.ts"]
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elcoosp/currx.git"
+    "url": "https://github.com/elcoosp/currx.git"
   },
   "keywords": [],
   "author": "elcoosp <elcoosp@gmail.com>",
@@ -29,11 +45,17 @@
   },
   "homepage": "https://github.com/elcoosp/currx#readme",
   "devDependencies": {
+    "@types/jest": "^22.2.3",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "jest": "^22.4.4",
+    "semantic-release": "^15.4.1",
     "travis-deploy-once": "^5.0.0",
+    "ts-jest": "^22.4.6",
     "typedoc": "^0.11.1",
     "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "@typed/curry": "^1.0.1"
   }
 }
