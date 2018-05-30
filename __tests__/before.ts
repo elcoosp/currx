@@ -1,4 +1,4 @@
-const { before } = require('../src/before.ts')
+import { before } from './../src/before'
 
 it('should return only the characters before index 3', () => {
   expect(before(3, 'abcdef')).toBe('abc')

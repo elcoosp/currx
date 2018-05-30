@@ -1,5 +1,4 @@
-const { after } = require('../src/after.ts')
-
+import { after } from './../src/after'
 it('should pipe functions passed at the first argument as an array againt the initial accumulator', () => {
   expect(after(3, 'abcdef')).toBe('ef')
 })

@@ -1,5 +1,4 @@
-const { prop } = require('../src/prop.ts')
-
+import { prop } from './../src/prop'
 it('should return true if the property equal the value on the last argument object', () => {
   expect(prop('id').eq(3)({ id: 3 })).toBe(true)
 })

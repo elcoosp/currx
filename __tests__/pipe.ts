@@ -1,5 +1,4 @@
-const { pipe, pipeArr } = require('../src/pipe.ts')
-
+import { pipe, pipeArr } from './../src/pipe'
 it('should pipe functions passed at the first argument as an array againt the initial accumulator', () => {
   expect(pipeArr([x => x.toUpperCase(), x => x.repeat(2)], 'abc')).toBe(
     'ABCABC'
