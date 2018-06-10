@@ -24,7 +24,7 @@ Curried and typed functions collection
 
 ## Usage
 
-Import desired functions.
+Todo, add documentation
 
 ## Support
 
