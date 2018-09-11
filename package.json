@@ -1,6 +1,6 @@
 {
 	"name": "currx",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Little Curried functions collection",
 	"main": "index.js",
 	"scripts": {
@@ -60,7 +60,7 @@
 		"travis-deploy-once": "^5.0.0",
 		"ts-jest": "^22.4.6",
 		"typedoc": "^0.11.1",
-		"typescript": "^2.8.3"
+		"typescript": "^2.9.2"
 	},
 	"dependencies": {
 		"@typed/curry": "^1.0.1"
