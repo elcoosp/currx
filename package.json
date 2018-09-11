@@ -1,6 +1,6 @@
 {
 	"name": "currx",
-	"version": "0.0.0-development",
+	"version": "0.0.0",
 	"description": "Little Curried functions collection",
 	"main": "index.js",
 	"scripts": {
